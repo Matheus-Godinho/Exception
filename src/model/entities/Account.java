@@ -35,7 +35,7 @@ public class Account {
 		return balance;
 	}
 	public void deposit(Double amount) {
-		balance += balance;
+		balance += amount;
 	}
 	public void withdraw(Double amount) {
 		if (amount > getWithdrawLimit())
@@ -43,7 +43,7 @@ public class Account {
 		if (amount > getBalance())
 			throw new DomainException("Not enough balance");
 
-		balance -= balance;
+		balance -= amount;
 	}
 	
 	public Double getWithdrawLimit() {
